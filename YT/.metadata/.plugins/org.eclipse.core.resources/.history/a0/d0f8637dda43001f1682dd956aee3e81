@@ -1,5 +1,0 @@
-package com.java8.functional;
-
-public interface CustomFunctionalInterface {
-
-}
