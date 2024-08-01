@@ -1,0 +1,77 @@
+package com.java8.functional;
+
+import java.util.function.Predicate;
+
+public class FI {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		Predicate<String> p =(param1) ->{
+			boolean b = param1.startsWith("R");
+			return b;
+		};
+		System.out.println("From Predicate<String>::"+p.test("Welcome"));
+		
+		//Ex2
+		Predicate<Integer> p1 =(param1) ->{
+		boolean b =  param1 >18;
+			return b;
+		};
+		System.out.println("From Predicate<Integer>::"+p1.test(12));
+		
+		//Default methods are and(), or() and negate()
+		//and()
+		Predicate<String> p2 =(param1) ->{
+			boolean b = param1.startsWith("S");
+			return b;
+		};
+		
+		System.out.println("Predicate::Defaut::and()::"
+					+p.and(p2).test("Java"));
+		
+		//or()
+		System.out.println("Predicate::Defaut::isEqual()::"
+				+p.or(p2).test("Java"));
+
+		//negate()
+		System.out.println("Predicate::Defaut::isEqual()::"
+				+p2.negate().test("Java"));
+		
+		
+		//Predicate static methods isEqual() and not()
+		//isEqual()
+		Predicate<Integer> equal = Predicate.isEqual(10);
+		System.out.println("Predicate::Static::isEqual()::"
+				+equal.test(10));
+		
+		//not()
+		
+		System.out.println("Predicate::Static::not()::"
+				+Predicate.not(equal).test(10));
+		
+		
+		
+		
+		//4. Function  
+		//5. Unary  
+		//6. Binary
+	}
+
+}

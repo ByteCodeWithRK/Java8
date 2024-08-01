@@ -1,0 +1,90 @@
+package com.java8.advanced;
+
+import java.util.function.BiConsumer;
+import java.util.function.BiFunction;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+
+public class OtherFunctionalInterfaces {
+
+	public static void main(String[] args) {
+		
+		/*
+		 * 1. Bi<FunctionalInterface>
+		 * 2. <SS><FunctionalInterface> i.e., IntConsumer, IntSupplier
+		 * 3. Obj<SS><FunctionalInterface>
+		 * 4. To<SS><FunctionalInterface>
+		 * 5. <SS>To<XX><FunctionalInterface>
+		 * Here SS and XX represents any datatype like int, long, 
+		 * float, double, String, boolean
+		 */
+		
+		/*
+		 * 1. Bi<FunctionalInterface>
+		 * Def: It will take extra input parameter as an input to the 
+		 *      functional interface
+		 *   i. It is not applicable for all the functional interfaces
+		 *      Supplier, UnaryOperator and BinaryOperator
+		 *   ii. Applicable for Consumer, Predicate and Function interfaces
+		 *      
+		 */
+		biFunctionalInterfaces();
+	}
+
+	private static void biFunctionalInterfaces() {
+		
+		BiFunction<Integer, Integer, Integer> bifun = (param1, param2) ->{
+			return param1*param2;
+		};
+		System.out.println("BiFunction::"+bifun.apply(10,10));
+		
+		BiConsumer<Integer, Integer> bicon = (param1, param2) ->{
+			System.out.println("BiConsumer::"+(param1+param2));
+		};
+		bicon.accept(10,20);
+		
+		Predicate<String> bipre = (param1) ->{
+			return param1.length() ==14;
+		};
+		System.out.println("BiPredicate::"+bipre.test("ByteCodeWithRK"));
+	
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ * 1. Bi<FunctionalInterface>
+ * 2. XX<Functional Interface>
+ * 3. ObjectXX<FunctionalInterface>
+ * 4. ToXX<FunctionalInterface>
+ * 5. XXToXX<FunctionalInterface>
+ * 
+ * Here XX represent wrapper classes like Integer, Long,Float
+ *  Double, String, Boolean types.
+ * 
+ */
+//Bi<FunctionalInterface>

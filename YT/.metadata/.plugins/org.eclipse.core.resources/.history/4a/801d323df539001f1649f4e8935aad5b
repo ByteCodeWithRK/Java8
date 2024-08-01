@@ -1,0 +1,31 @@
+package com.java8.functional;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
+
+import com.java8.DataSource;
+import com.java8.Players;
+
+public class FunctionalInterfaceEx {
+
+	public static void main(String[] args) {
+		
+		
+		// Single abstract method and can have any no.of static or default 
+		// java.util.function package
+		// Runnable, Callable, Comparable, Comparator, ActionListner, etc.,
+	
+		//After Java8:
+		//1. Consumer	2. Supplier	 3. Predicate	 4. Function	5. Unary	6. Binary
+		
+	
+}
+

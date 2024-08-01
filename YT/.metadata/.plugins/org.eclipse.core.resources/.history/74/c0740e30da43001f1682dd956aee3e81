@@ -1,0 +1,21 @@
+package com.java8.functional;
+
+public class CustomFunctionalInterface {
+
+	public static void main(String[] args) {
+		
+
+	}
+	
+	/*
+	 * @FunctionalInterface
+	 
+	interface <custom_interface_name>{
+		void m1();
+		//Static
+		//Default methods
+	}
+	*/
+
+}
+	
